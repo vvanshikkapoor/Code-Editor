@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Code Editor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </script>
+  <script>
+$(document).ready(function(){
+  $("h1").click(function(){
+$("h1").fadeTo("slow", 0.4);
+$("h1").fadeTo("slow", 1);
+  })
+});
+    $(document).ready(function(){
+  $("#htm").click(function(){
+    $("#htmlCode").toggle();
+  });
+  $("#style").click(function(){
+    $("#cssCode").toggle();
+  });
+  $("#javas").click(function(){
+    $("#jsCode").toggle();
+  });
+});
+  </script>
+</head>
+<body>
+<nav class="navi">
+<div class="nav_contr">
+  <h1>Alpha<span id="editor">Editor</span><span id="x">X</span></h1>
+ <ul class="navlist">
+   <li><h3 style="color: white;">Learn : </h3></li>
+  <li> <a href="https://www.w3schools.com/html/default.asp" class="navlink" id="html">HTML</a></li>
+  <li> <a href="https://www.w3schools.com/css/default.asp" class="navlink" id="css">CSS</a></li>
+  <li> <a href="https://www.w3schools.com/js/default.asp" class="navlink" id="js">Javascript</a></li>
+  </ul>
+</div>
+</nav>
+
+<div class="container-fluid">
+
+  <div class="row">
+ 
+  <div class="col-sm-4">
+  <h4><a href="#htmlCode"  class="links" id="htm">HTML</a></h4>
+    <div class="row" >
+    
+    <textarea id="htmlCode" placeholder="HTML Code" 
+                      oninput="showPreview()"></textarea></div>
+    <h4><a href="#cssCode" class="links" id="style">CSS</a></h4>
+    <div class="row">
+    
+    <textarea id="cssCode" placeholder="CSS Code" 
+                      oninput="showPreview()"></textarea></div>
+    <h4><a href="#jsCode" class="links" id="javas">JAVASCRIPT</a></h4>         
+    <div class="row" >
+    
+    <textarea id="jsCode" placeholder="JavaScript Code" oninput="showPreview()"></textarea></div>
+  </div>
+  <div class="col-sm-4" id="frame"> 
+  <h2>Output :</h2>
+  <iframe id="preview-window"></iframe></div>
+  </div>
+</div>
+<div class="footer">
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo">AlphaEditorX</a>
+          </div>
+          <br>
+          <h5 class="website__rights">©Vanshika_Kapoor 2021. </h5>
+          <br>
+          <div class="social__icons">
+            <a href="https://www.facebook.com/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/thealphacodie/" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://github.com/vvanshikkapoor?tab=repositories" class="social__icon--link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/vanshika-kapoor-993b15163/" class="social__icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a></a>
+          </div>
+        </div>
+      </section>
+ </div>
+ <script src="app.js"></script>
+
+</body>
+</html>
